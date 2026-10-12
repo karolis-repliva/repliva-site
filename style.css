@@ -72,3 +72,13 @@ body.home .wrap{max-width:1080px}
   .btn{display:block}
   .rp{margin-left:16px}
 }
+
+.why{padding:64px 0 16px}
+.why h2{font-size:clamp(26px,4vw,34px);margin:0 0 24px;text-align:center}
+.why-grid{display:grid;gap:16px}
+.w{background:var(--brand-soft);border-radius:20px;padding:24px}
+.w .ic{width:40px;height:40px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:14px}
+.w h3{margin:0 0 6px;color:var(--brand);font-size:19px;line-height:1.3}
+.w p{margin:0;color:var(--ink-muted);font-size:16px}
+@media (min-width:700px){.why-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
