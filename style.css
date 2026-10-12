@@ -73,12 +73,23 @@ body.home .wrap{max-width:1080px}
   .rp{margin-left:16px}
 }
 
+/* ---------- How it works ---------- */
+.how{padding:72px 0 0;display:grid;gap:24px}
+.how h2{font-size:clamp(26px,4vw,34px);margin:0}
+.steps{list-style:none;margin:0;padding:0;display:grid}
+.steps li{margin:0;display:flex;gap:18px;position:relative;padding:0 0 28px}
+.steps li:last-child{padding-bottom:0}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:19px;top:44px;bottom:6px;width:2px;background:var(--brand-soft)}
+.steps .n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:grid;place-items:center;font-size:18px}
+.steps li:last-child .n{background:var(--accent);color:var(--brand)}
+.steps h3{margin:6px 0 4px;color:var(--brand);font-size:19px;line-height:1.3}
+.steps p{margin:0;color:var(--ink-muted);font-size:16px;max-width:36em}
+
+/* ---------- Why ---------- */
 .why{padding:64px 0 16px}
-.why h2{font-size:clamp(26px,4vw,34px);margin:0 0 24px;text-align:center}
-.why-grid{display:grid;gap:16px}
-.w{background:var(--brand-soft);border-radius:20px;padding:24px}
-.w .ic{width:40px;height:40px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:14px}
-.w h3{margin:0 0 6px;color:var(--brand);font-size:19px;line-height:1.3}
-.w p{margin:0;color:var(--ink-muted);font-size:16px}
-@media (min-width:700px){.why-grid{grid-template-columns:1fr 1fr}}
-@media (min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why h2{font-size:clamp(26px,4vw,34px);margin:0 0 24px}
+.why-list{display:grid;gap:22px 48px;max-width:900px}
+.why-list .w{padding-left:18px;border-left:3px solid var(--accent)}
+.why-list h3{margin:0 0 4px;color:var(--brand);font-size:19px;line-height:1.3}
+.why-list p{margin:0;color:var(--ink-muted);font-size:16px}
+@media (min-width:700px){.why-list{grid-template-columns:1fr 1fr}}
