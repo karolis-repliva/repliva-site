@@ -20,7 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
-<link rel="stylesheet" href="/style.css?v=20261012c">
+<link rel="stylesheet" href="/style.css?v=20261013a">
+<script src="/home.js?v=20261013a" defer></script>
 </head>
 <body class="home">
 <div class="top"><div class="wrap">
@@ -30,18 +31,21 @@
   </header>
   <div class="hero">
     <div class="intro">
-      <h1>You work, we reply!</h1>
+      <h1>You work, we <span class="sr-only">reply!</span><span class="rot" aria-hidden="true"><span class="on">reply!</span><span>say thanks!</span><span>handle it!</span></span></h1>
       <p class="lede">We reply to your Google reviews for you. Every new review gets a polite, human reply within 48 hours.</p>
     </div>
-    <div class="demo" aria-label="Sample reply">
-      <div class="rv">
-        <div class="rh"><span class="av" aria-hidden="true">S</span>Sample review <span class="st" aria-label="5 stars">★★★★★</span></div>
-        <p>Fixed my car quickly and kindly explained what they replaced. Thank you!</p>
+    <div class="demo-wrap">
+      <div class="demo" id="demo" aria-label="Sample reply">
+        <div class="rv item">
+          <div class="rh"><span class="av" aria-hidden="true">S</span>Sample review <span class="st" aria-label="5 stars">★★★★★</span></div>
+          <p>Fixed my car quickly and kindly explained what they replaced. Thank you!</p>
+        </div>
+        <div class="rp item">
+          <div class="rh">Company reply · 3 hours later</div>
+          <p class="txt">Thank you for your review. It matters to us not only to fix things quickly but also to explain what was replaced, so we are very glad you noticed. Safe travels!</p>
+        </div>
       </div>
-      <div class="rp">
-        <div class="rh">Company reply · 3 hours later</div>
-        <p>Thank you for your review. It matters to us not only to fix things quickly but also to explain what was replaced, so we are very glad you noticed. Safe travels!</p>
-      </div>
+      <div class="pager" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
     </div>
   </div>
 </div></div>

@@ -97,3 +97,61 @@ body.home .wrap{max-width:1080px}
 /* ---------- Language switch ---------- */
 .lang-switch{color:#fff;font-weight:800;font-size:15px;text-decoration:none;border:2px solid rgba(255,255,255,.45);border-radius:999px;padding:6px 14px;line-height:1}
 .lang-switch:hover,.lang-switch:focus-visible{color:var(--brand);background:#fff;border-color:#fff}
+
+/* ---------- Motion (home page) ----------
+   Everything below is decoration. The page reads the same without it,
+   and it all switches off for visitors who ask for reduced motion. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Rotating last word of the headline */
+.rot{display:inline-grid;vertical-align:bottom;overflow:hidden;color:var(--accent)}
+.rot span{grid-area:1/1;transition:transform .55s cubic-bezier(.6,0,.2,1),opacity .55s}
+.rot span:not(.on){transform:translateY(100%);opacity:0}
+.rot span.out{transform:translateY(-100%);opacity:0}
+
+/* Sample review list with typing reply */
+.demo-wrap{max-width:480px;width:100%;justify-self:center;display:grid;gap:12px}
+.demo-wrap .demo{min-height:300px;align-content:start}
+.demo.live .item{animation:pop .5s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+.st .off{opacity:.3}
+.rp .txt::after{content:"";display:inline-block;width:2px;height:1em;background:currentColor;vertical-align:-2px;margin-left:2px;opacity:0}
+.rp.typing .txt::after{opacity:1;animation:caret .8s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.dots{display:inline-flex;gap:4px}
+.dots i{width:7px;height:7px;border-radius:50%;background:#2d6b55;animation:dot 1s infinite}
+.dots i:nth-child(2){animation-delay:.15s}
+.dots i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,100%{opacity:.3;transform:none}50%{opacity:1;transform:translateY(-3px)}}
+.pager{display:flex;gap:6px;justify-content:flex-end}
+.pager i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);transition:background .3s}
+.pager i.on{background:var(--accent)}
+
+/* Light running around the price box */
+@property --beam{syntax:"<angle>";initial-value:0deg;inherits:false}
+.price{position:relative}
+.price::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;pointer-events:none;
+  background:conic-gradient(from var(--beam),transparent 0 70%,var(--accent) 85%,#fff 90%,transparent 95%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+  animation:beam 5s linear infinite}
+@keyframes beam{to{--beam:360deg}}
+
+/* Light running down the line between steps */
+.steps .n{position:relative;z-index:1}
+.steps li:not(:last-child)::after{
+  background:linear-gradient(var(--accent),var(--accent)) 0 -40px/100% 40px no-repeat,var(--brand-soft);
+  animation:beamdown 3.2s linear infinite}
+.steps li:nth-child(2)::after{animation-delay:.8s}
+.steps li:nth-child(3)::after{animation-delay:1.6s}
+@keyframes beamdown{0%{background-position:0 -40px}60%,100%{background-position:0 calc(100% + 40px)}}
+
+/* Steps and "why" items fade in on scroll (browsers without support show them as normal) */
+@supports (animation-timeline:view()){
+  .steps li,.why-list .w{animation:blurfade linear both;animation-timeline:view();animation-range:entry 0% entry 60%}
+}
+@keyframes blurfade{from{opacity:.15;filter:blur(6px);transform:translateY(16px)}to{opacity:1;filter:none;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  body.home *,body.home *::before,body.home *::after{animation:none!important;transition:none!important}
+}

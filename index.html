@@ -23,7 +23,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
-<link rel="stylesheet" href="/style.css?v=20261012c">
+<link rel="stylesheet" href="/style.css?v=20261013a">
+<script src="/home.js?v=20261013a" defer></script>
 </head>
 <body class="home">
 <div class="top"><div class="wrap">
@@ -33,18 +34,21 @@
   </header>
   <div class="hero">
     <div class="intro">
-      <h1>Jūs dirbate, mes atsakome!</h1>
+      <h1>Jūs dirbate, mes <span class="sr-only">atsakome!</span><span class="rot" aria-hidden="true"><span class="on">atsakome!</span><span>padėkojame!</span><span>pasirūpiname!</span></span></h1>
       <p class="lede">Atsakome į Jūsų Google atsiliepimus už Jus. Kiekvienas naujas atsiliepimas sulaukia mandagaus, žmogiško atsakymo per 48 valandas.</p>
     </div>
-    <div class="demo" aria-label="Atsakymo pavyzdys">
-      <div class="rv">
-        <div class="rh"><span class="av" aria-hidden="true">P</span>Pavyzdinis atsiliepimas <span class="st" aria-label="5 žvaigždutės">★★★★★</span></div>
-        <p>Greitai sutvarkė automobilį, maloniai paaiškino, ką keitė. Ačiū!</p>
+    <div class="demo-wrap">
+      <div class="demo" id="demo" aria-label="Atsakymo pavyzdys">
+        <div class="rv item">
+          <div class="rh"><span class="av" aria-hidden="true">P</span>Pavyzdinis atsiliepimas <span class="st" aria-label="5 žvaigždutės">★★★★★</span></div>
+          <p>Greitai sutvarkė automobilį, maloniai paaiškino, ką keitė. Ačiū!</p>
+        </div>
+        <div class="rp item">
+          <div class="rh">Įmonės atsakymas · po 3 val.</div>
+          <p class="txt">Dėkojame už atsiliepimą. Mums svarbu ne tik greitai sutaisyti, bet ir paaiškinti, kas buvo pakeista, tad labai džiugu, kad tai pastebėjote. Saugaus kelio!</p>
+        </div>
       </div>
-      <div class="rp">
-        <div class="rh">Įmonės atsakymas · po 3 val.</div>
-        <p>Dėkojame už atsiliepimą. Mums svarbu ne tik greitai sutaisyti, bet ir paaiškinti, kas buvo pakeista, tad labai džiugu, kad tai pastebėjote. Saugaus kelio!</p>
-      </div>
+      <div class="pager" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
     </div>
   </div>
 </div></div>
