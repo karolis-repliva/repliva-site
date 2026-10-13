@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Repliva.lt – atsakymai į Google atsiliepimus</title>
-<meta name="description" content="Repliva.lt atsako į kiekvieną naują Jūsų įmonės Google atsiliepimą per 48 valandas lietuvių ir anglų kalbomis. 49 € per mėnesį, pirmas mėnuo nemokamai.">
+<meta name="description" content="Google atsiliepimų valdymas įmonėms: Repliva.lt atsako į kiekvieną naują atsiliepimą per 48 valandas lietuvių ir anglų kalbomis. 49 € per mėnesį, pirmas mėnuo nemokamai.">
 <link rel="canonical" href="https://repliva.lt/">
 <link rel="alternate" hreflang="lt" href="https://repliva.lt/">
 <link rel="alternate" hreflang="en" href="https://repliva.lt/en/">
+<link rel="alternate" hreflang="x-default" href="https://repliva.lt/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Repliva.lt">
 <meta property="og:title" content="Repliva.lt – atsakymai į Google atsiliepimus">
@@ -18,13 +19,16 @@
 <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Repliva.lt","url":"https://repliva.lt/","logo":"https://repliva.lt/icon-512.png","email":"karolis@repliva.lt"}
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://repliva.lt/#org","name":"Repliva.lt","url":"https://repliva.lt/","logo":"https://repliva.lt/icon-512.png","email":"karolis@repliva.lt"},
+ {"@type":"Service","name":"Atsakymai į Google atsiliepimus","serviceType":"Google atsiliepimų valdymas","description":"Atsakymas į kiekvieną naują Google atsiliepimą per 48 valandas lietuvių ir anglų kalbomis, mėnesio ataskaita ir QR kortelė.","provider":{"@id":"https://repliva.lt/#org"},"areaServed":{"@type":"Country","name":"Lietuva"},"availableLanguage":["lt","en"],"offers":{"@type":"Offer","price":"49","priceCurrency":"EUR","description":"49 € per mėnesį, pirmas mėnuo nemokamai."}}
+]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
-<link rel="stylesheet" href="/style.css?v=20261013a">
-<script src="/home.js?v=20261013a" defer></script>
+<link rel="stylesheet" href="/style.css?v=20261013b">
+<script src="/home.js?v=20261013b" defer></script>
 </head>
 <body class="home">
 <div class="top"><div class="wrap">
@@ -36,6 +40,7 @@
     <div class="intro">
       <h1>Jūs dirbate, mes <span class="sr-only">atsakome!</span><span class="rot" aria-hidden="true"><span class="on">atsakome!</span><span>padėkojame!</span><span>pasirūpiname!</span></span></h1>
       <p class="lede">Atsakome į Jūsų Google atsiliepimus už Jus. Kiekvienas naujas atsiliepimas sulaukia mandagaus, žmogiško atsakymo per 48 valandas.</p>
+      <p class="for">Autoservisams, klinikoms, restoranams, viešbučiams, grožio salonams ir kitoms įmonėms visoje Lietuvoje.</p>
     </div>
     <div class="demo-wrap">
       <div class="demo" id="demo" aria-label="Atsakymo pavyzdys">
@@ -58,7 +63,7 @@
     <div>
       <h2>Ką gaunate:</h2>
       <ul class="ticks">
-        <li>atsakymas į kiekvieną naują Google atsiliepimą per 48 valandas lietuvių ir anglų kalbomis;</li>
+        <li>atsakymas į kiekvieną naują atsiliepimą Jūsų Google verslo profilyje (Google Maps) per 48 valandas lietuvių ir anglų kalbomis;</li>
         <li>į neigiamus atsiliepimus atsakymą pirmiausia suderiname su Jumis;</li>
         <li>vieno puslapio mėnesio ataskaita: atsiliepimai, atsakymai, reitingas, pasikartojančios temos;</li>
         <li>QR kortelė prie kasos, vedanti tiesiai į Jūsų atsiliepimų puslapį.</li>
@@ -76,7 +81,7 @@
     <ol class="steps">
       <li><span class="n">1</span><div><h3>Parašote mums</h3><p>Susitariame, nuo kada pradedame.</p></div></li>
       <li><span class="n">2</span><div><h3>Pasirašome sutartį internetu</h3><p>Elektroniniu parašu per Smart-ID ar Mobile-ID, be popierių ir susitikimų.</p></div></li>
-      <li><span class="n">3</span><div><h3>Pridedate mus ir užpildote anketą</h3><p>Pridedate mus kaip Google profilio valdytoją ir atsakote į klausimus apie Jūsų toną. Vienas kartas, apie 15–20 minučių.</p></div></li>
+      <li><span class="n">3</span><div><h3>Pridedate mus ir užpildote anketą</h3><p>Pridedate mus kaip Google verslo profilio valdytoją ir atsakote į klausimus apie Jūsų toną. Vienas kartas, apie 15–20 minučių.</p></div></li>
       <li><span class="n">4</span><div><h3>Atsakome už Jus</h3><p>Kiekvienas naujas atsiliepimas sulaukia atsakymo per 48 valandas. Neigiamus pirmiausia suderiname su Jumis, kas mėnesį gaunate ataskaitą.</p></div></li>
     </ol>
   </section>
@@ -89,6 +94,15 @@
       <div class="w"><h3>Pagal Google taisykles</h3><p>Atsiliepimų nerašome, neperkame, netriname ir nefiltruojame. Jūsų reitingas auga sąžiningai.</p></div>
       <div class="w"><h3>Aiški kaina, jokio darbo Jums</h3><p>49 € per mėnesį, pirmas mėnuo nemokamai. Po pradžios viską darome mes.</p></div>
     </div>
+  </section>
+
+  <section class="faq" id="duk">
+    <h2>D.U.K.</h2>
+    <details><summary>Kodėl verta atsakyti į Google atsiliepimus?</summary><p>Rinkdamiesi įmonę, žmonės skaito ne tik atsiliepimus, bet ir tai, kaip į juos atsakyta. Neatsakytas atsiliepimas, ypač neigiamas, atrodo ignoruotas.</p></details>
+    <details><summary>Ar saugu pridėti jus prie Google verslo profilio?</summary><p>Valdytojo teisės leidžia atsakyti į atsiliepimus, bet neleidžia ištrinti profilio ar pašalinti savininko. Profilio informacijos be Jūsų prašymo nekeičiame, o prieigą galite atšaukti bet kada.</p></details>
+    <details><summary>Ar galite ištrinti neigiamus atsiliepimus?</summary><p>Ne. Atsiliepimų netriname, nerašome, neperkame ir nefiltruojame, nes tai prieštarauja Google taisyklėms. Neigiamam atsiliepimui geriausia ramus ir greitas atsakymas.</p></details>
+    <details><summary>Kokiomis kalbomis atsakote?</summary><p>Į lietuviškus atsiliepimus atsakome lietuviškai, į parašytus kitomis kalbomis – angliškai.</p></details>
+    <details><summary>Ar garantuojate geresnį reitingą?</summary><p>Ne, reitingą lemia klientai ir Google. Garantuojame, kad kiekvienas naujas atsiliepimas sulauks atsakymo per 48 valandas, o kas mėnesį gausite ataskaitą.</p></details>
   </section>
 </div></main>
 
